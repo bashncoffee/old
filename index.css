@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%20&font-display=swap');
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@utility pixel-border {
+  box-shadow: 
+    0 0 0 2px #0f172a,
+    0 0 0 4px #14b8a6;
+  image-rendering: pixelated;
+}
+
+@utility pixel-border-purple {
+  box-shadow: 
+    0 0 0 2px #0f172a,
+    0 0 0 4px #a855f7;
+  image-rendering: pixelated;
+}
+
+@utility pixel-border-gold {
+  box-shadow: 
+    0 0 0 2px #0f172a,
+    0 0 0 4px #f59e0b;
+  image-rendering: pixelated;
+}
+
+@utility neon-glow-teal {
+  text-shadow: 0 0 5px #14b8a6, 0 0 10px #14b8a6, 0 0 15px #14b8a6;
+}
+
+@utility neon-glow-purple {
+  text-shadow: 0 0 5px #a855f7, 0 0 10px #a855f7, 0 0 15px #a855f7;
+}
+
+@utility neon-glow-yellow {
+  text-shadow: 0 0 5px #f59e0b, 0 0 10px #f59e0b, 0 0 15px #f59e0b;
+}
+
+@utility neon-box-glow-teal {
+  box-shadow: 0 0 5px #14b8a6, 0 0 10px #14b8a6, 0 0 15px #14b8a6;
+}
+
+@utility neon-box-glow-purple {
+  box-shadow: 0 0 5px #a855f7, 0 0 10px #a855f7, 0 0 15px #a855f7;
+}
+
+@utility neon-box-glow-yellow {
+  box-shadow: 0 0 5px #f59e0b, 0 0 10px #f59e0b, 0 0 15px #f59e0b;
+}
+
+@utility pixelated {
+  image-rendering: pixelated;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #0f172a;
+  color: #f8fafc;
+  font-family: 'Press Start 2P', cursive, monospace;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+  border: 2px solid #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #14b8a6;
+  border: 2px solid #0f172a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0d9488;
+}

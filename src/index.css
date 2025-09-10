@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@utility neon-glow {
+  box-shadow: 0 0 10px theme('colors.cyan.400'), 0 0 20px theme('colors.cyan.400/40');
+  animation: neon-pulse 3s infinite alternate;
+}
+
+@utility neon-border {
+  border: 1px solid theme('colors.cyan.400/70');
+  box-shadow: 0 0 8px theme('colors.cyan.400/30'), inset 0 0 5px theme('colors.cyan.400/20');
+}
+
+@utility neon-text {
+  color: theme('colors.cyan.100');
+  text-shadow: 0 0 5px theme('colors.cyan.400/50');
+}
+
+@keyframes neon-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 10px theme('colors.cyan.400'), 0 0 20px theme('colors.cyan.400/40');
+  }
+  50% { 
+    box-shadow: 0 0 15px theme('colors.cyan.400'), 0 0 30px theme('colors.cyan.400/60');
+  }
+}
+
+@keyframes section-highlight-pulse {
+  0% { 
+    box-shadow: 0 0 5px theme('colors.cyan.400/30'), inset 0 0 5px theme('colors.cyan.400/20');
+  }
+  50% { 
+    box-shadow: 0 0 20px theme('colors.cyan.400/60'), inset 0 0 15px theme('colors.cyan.400/40');
+  }
+  100% { 
+    box-shadow: 0 0 5px theme('colors.cyan.400/30'), inset 0 0 5px theme('colors.cyan.400/20');
+  }
+}
+
+.section-highlight {
+  animation: section-highlight-pulse 1s ease-in-out;
+}
+
+.timeline-dot {
+  background: #001821;
+  border: 2px solid #24f3ff;
+  box-shadow: 0 0 10px rgba(36,243,255,0.5);
+  transition: all 0.3s ease;
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.glass-panel {
+  background: rgba(0,20,30,0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.glass-panel-dark {
+  background: rgba(0,16,24,0.55);
+}
+
+body {
+  background-color: #0b1a20;
+  background-image: url('https://i.imgur.com/0QUUBdj.jpg'); /* Updated to enchanted forest image */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
