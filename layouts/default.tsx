@@ -11,13 +11,13 @@ export default function DefaultLayout({
 }) {
   return (
     <div className="relative flex flex-col h-screen">
-    {/* warstwa tła – wypełnia cały kontener i jest z-index poniżej treści */}
-    <Image
-    src={background}
-    alt="Background"
-    fill
-    className="absolute inset-0 -z-10 object-cover"
-    />
+        <div className="relative flex h-screen flex-col">
+          {/* JEDYNA warstwa tła w całej aplikacji */}
+          <div
+            aria-hidden
+            className="pointer-events-none fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/old/assets/background.png')" }}
+          />
     <Head />
     <Navbar />
     <main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
