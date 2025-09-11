@@ -114,7 +114,7 @@ export default function App() {
                     transition={{ duration: 0.3 }}
                   >
                     <img 
-                      src="https://i.imgur.com/0oaWGHm.png" /* Updated to cartoon character avatar */
+                      src="/avatar.png" /* lokalny plik z /public/avatar.png */
                       alt="Profile" 
                       className="w-full h-full object-cover"
                     />
